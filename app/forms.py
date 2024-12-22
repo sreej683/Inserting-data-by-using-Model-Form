@@ -34,10 +34,17 @@ class WebPageModelForm(forms.ModelForm):
         fields='__all__'
         #fields=['topic_name','name']
         #exclude=['url','name']
+        #labels={'topic_name':'TPN','name':'Person_name'}
+        #widgets={'url':forms.PasswordInput()}
+        #widgets={'name':forms.Textarea}
+        help_texts={'topic_name':'select option which u like'}
+
+
 
 
 class AccessModelForm(forms.ModelForm):
     class Meta:
         model=AccessRecord
-        #fields='__all__'
-        fields=['name']
+        fields='__all__'
+        #fields=['name']
+        #exclude=['name','author']
